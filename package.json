@@ -1,0 +1,59 @@
+{
+    "name": "wx-snippets",
+    "displayName": "WeChat Snippets",
+    "author": "wuxianqiang",
+    "publisher": "wuxianqiang",
+    "icon": "img/logo.png",
+    "description": "A WeChat Extension",
+    "license": "MIT",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "keywords": [
+        "javascript",
+        "snippet",
+        "wx",
+        "mpx"
+    ],
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wuxianqiang/wx-snippets.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wuxianqiang/wx-snippets.git",
+        "email": "2631640352@qq.com"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "vue-html",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "mpx",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "mpx",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "mpx",
+                "path": "./snippets/vue.json"
+            }
+        ]
+    }
+}

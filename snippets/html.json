@@ -1,0 +1,419 @@
+{
+    "template": {
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "\t<${1:view}$2>",
+            "\t\t$0",
+            "\t</${1:view}>",
+            "</template>"
+        ],
+        "description": "template element"
+    },
+    "wx:if": {
+        "prefix": "wxIf",
+        "body": [
+            "wx:if=\"{{${1:condition}}}\""
+        ],
+        "description": "条件渲染"
+    },
+    "wx:else": {
+        "prefix": "wxElse",
+        "body": [
+            "wx:else"
+        ],
+        "description": "条件渲染"
+    },
+    "wx:elif": {
+        "prefix": "wxElif",
+        "body": [
+            "wx:elif=\"{{${1:condition}}}\""
+        ],
+        "description": "条件渲染"
+    },
+    "wx:for": {
+        "prefix": "wxFor",
+        "body": [
+            "wx:for=\"{{${1:items}}}\" wx:key=\"${2:index}\""
+        ],
+        "description": "列表渲染"
+    },
+    "wx:model": {
+        "prefix": "wxModel",
+        "body": [
+            "wx:model=\"{{${1:something}}}\""
+        ],
+        "description": "双向数据绑定"
+    },
+    "wx:key": {
+        "prefix": "wxKey",
+        "body": [
+            "wx:key=\"${1:key}\""
+        ],
+        "description": "如果列表中项目的位置会动态改变或者有新的项目添加到列表中，并且希望列表中的项目保持自己的特征和状态，需要使用 wx:key 来指定列表中项目的唯一的标识符。"
+    },
+    "wx:ref": {
+        "prefix": "wxRef",
+        "body": [
+            "wx:ref=\"{{${1:reference}}}\"$0"
+        ],
+        "description": "获取节点"
+    },
+    "slotA": {
+        "prefix": "slotA",
+        "body": [
+            "slot=\"$1\"$0"
+        ],
+        "description": "插槽内容"
+    },
+    "slotE": {
+        "prefix": "slotE",
+        "body": [
+            "<slot$1>$2</slot>$0"
+        ],
+        "description": "插槽内容"
+    },
+    "component": {
+        "prefix": "component",
+        "body": [
+            "<component :is=\"${1:componentId}\"></component>$0"
+        ],
+        "description": "动态组件"
+    },
+    "wx:class": {
+        "prefix": "wxClass",
+        "body": [
+            "wx:class=\"{{${1:something}}}\""
+        ],
+        "description": "绑定 HTML Class"
+    },
+    "wx:style": {
+        "prefix": "wxStyle",
+        "body": [
+            "wx:style=\"{{${1:something}}}\""
+        ],
+        "description": "绑定内联样式"
+    },
+    "bindtap": {
+        "prefix": "bindtap",
+        "body": [
+            "bindtap=\"$1\"$0"
+        ],
+        "description": "bindtap=''"
+    },
+    "cover-image": {
+        "prefix": "coverImage",
+        "body": [
+            "<cover-image>$1</cover-image>$0"
+        ],
+        "description": "覆盖在原生组件之上的图片视图。"
+    },
+    "cover-view": {
+        "prefix": "coverView",
+        "body": [
+            "<cover-view>$1</cover-view>$0"
+        ],
+        "description": "覆盖在原生组件之上的文本视图"
+    },
+    "match-media": {
+        "prefix": "matchMedia",
+        "body": [
+            "<match-media>$1</match-media>$0"
+        ],
+        "description": "media query 匹配检测节点。可以指定一组 media query 规则，满足时，这个节点才会被展示"
+    },
+    "movable-area": {
+        "prefix": "movableArea",
+        "body": [
+            "<movable-area>$1</movable-area>$0"
+        ],
+        "description": "movable-view的可移动区域"
+    },
+    "movable-view": {
+        "prefix": "movableArea",
+        "body": [
+            "<movable-view>$1</movable-view>$0"
+        ],
+        "description": "可移动的视图容器，在页面中可以拖拽滑动。movable-view 必须在 movable-area 组件中，并且必须是直接子节点，否则不能移动"
+    },
+    "scroll-view": {
+        "prefix": "scrollView",
+        "body": [
+            "<scroll-view>$1</scroll-view>$0"
+        ],
+        "description": "可滚动视图区域。使用竖向滚动时，需要给 scroll-view 一个固定高度，通过 WXSS 设置 height"
+    },
+    "swiper": {
+        "prefix": "swiper",
+        "body": [
+            "<swiper>$1</swiper>$0"
+        ],
+        "description": "滑块视图容器。其中只可放置swiper-item组件，否则会导致未定义的行为"
+    },
+    "swiper-item": {
+        "prefix": "swiperItem",
+        "body": [
+            "<swiper-item>$1</swiper-item>$0"
+        ],
+        "description": "仅可放置在swiper组件中，宽高自动设置为100%"
+    },
+    "view": {
+        "prefix": "view",
+        "body": [
+            "<view>$1</view>$0"
+        ],
+        "description": "视图容器"
+    },
+    "icon": {
+        "prefix": "icon",
+        "body": [
+            "<icon>$1</icon>$0"
+        ],
+        "description": "图标，icon的类型，有效值：success, success_no_circle, info, warn, waiting, cancel, download, search, clear"
+    },
+    "progress": {
+        "prefix": "progress",
+        "body": [
+            "<progress>$1</progress>$0"
+        ],
+        "description": "进度条"
+    },
+    "rich-text": {
+        "prefix": "rich-text",
+        "body": [
+            "<rich-text>$1</rich-text>$0"
+        ],
+        "description": "富文本"
+    },
+    "text": {
+        "prefix": "text",
+        "body": [
+            "<text>$1</text>$0"
+        ],
+        "description": "文本"
+    },
+    "button": {
+        "prefix": "button",
+        "body": [
+            "<button>$1</button>$0"
+        ],
+        "description": "按钮"
+    },
+    "checkbox": {
+        "prefix": "checkbox",
+        "body": [
+            "<checkbox>$1</checkbox>$0"
+        ],
+        "description": "多选项目"
+    },
+    "checkbox-group": {
+        "prefix": "checkbox-group",
+        "body": [
+            "<checkbox-group>$1</checkbox-group>$0"
+        ],
+        "description": "多项选择器，内部由多个 checkbox 组成"
+    },
+    "editor": {
+        "prefix": "editor",
+        "body": [
+            "<editor>$1</editor>$0"
+        ],
+        "description": "富文本编辑器，可以对图片、文字进行编辑"
+    },
+    "form": {
+        "prefix": "form",
+        "body": [
+            "<form>$1</form>$0"
+        ],
+        "description": "表单"
+    },
+    "input": {
+        "prefix": "input",
+        "body": [
+            "<input>$1</input>$0"
+        ],
+        "description": "输入框"
+    },
+    "label": {
+        "prefix": "label",
+        "body": [
+            "<label>$1</label>$0"
+        ],
+        "description": "用来改进表单组件的可用性"
+    },
+    "picker": {
+        "prefix": "picker",
+        "body": [
+            "<picker>$1</picker>$0"
+        ],
+        "description": "从底部弹起的滚动选择器"
+    },
+    "picker-view": {
+        "prefix": "pickerView",
+        "body": [
+            "<picker-view>$1</picker-view>$0"
+        ],
+        "description": "嵌入页面的滚动选择器。其中只可放置 picker-view-column组件，其它节点不会显示"
+    },
+    "picker-view-column": {
+        "prefix": "pickerViewColumn",
+        "body": [
+            "<picker-view-column>$1</picker-view-column>$0"
+        ],
+        "description": "滚动选择器子项。仅可放置于picker-view中，其孩子节点的高度会自动设置成与picker-view的选中框的高度一致"
+    },
+    "radio": {
+        "prefix": "radio",
+        "body": [
+            "<radio>$1</radio>$0"
+        ],
+        "description": "单选项目"
+    },
+    "radio-group": {
+        "prefix": "radioGroup",
+        "body": [
+            "<radio-group>$1</radio-group>$0"
+        ],
+        "description": "单项选择器，内部由多个 radio 组成"
+    },
+    "slider": {
+        "prefix": "slider",
+        "body": [
+            "<slider>$1</slider>$0"
+        ],
+        "description": "滑动选择器"
+    },
+    "switch": {
+        "prefix": "switch",
+        "body": [
+            "<switch>$1</switch>$0"
+        ],
+        "description": "开关选择器"
+    },
+    "textarea": {
+        "prefix": "textarea",
+        "body": [
+            "<textarea>$1</textarea>$0"
+        ],
+        "description": "多行输入框"
+    },
+    "functional-page-navigator": {
+        "prefix": "functionalPageNavigator",
+        "body": [
+            "<functional-page-navigator>$1</functional-page-navigator>$0"
+        ],
+        "description": "仅在插件中有效，用于跳转到插件功能页"
+    },
+    "navigator": {
+        "prefix": "navigator",
+        "body": [
+            "<navigator>$1</navigator>$0"
+        ],
+        "description": "页面链接"
+    },
+    "audio": {
+        "prefix": "audio",
+        "body": [
+            "<audio>$1</audio>$0"
+        ],
+        "description": "音频"
+    },
+    "camera": {
+        "prefix": "camera",
+        "body": [
+            "<camera>$1</camera>$0"
+        ],
+        "description": "系统相机"
+    },
+    "image": {
+        "prefix": "image",
+        "body": [
+            "<image>$1</image>$0"
+        ],
+        "description": "图片"
+    },
+    "live-player": {
+        "prefix": "livePlayer",
+        "body": [
+            "<live-player>$1</live-player>$0"
+        ],
+        "description": "实时音视频播放"
+    },
+    "live-pusher": {
+        "prefix": "livePusher",
+        "body": [
+            "<live-pusher>$1</live-pusher>$0"
+        ],
+        "description": "实时音视频录制"
+    },
+    "video": {
+        "prefix": "video",
+        "body": [
+            "<video>$1</video>$0"
+        ],
+        "description": "视频"
+    },
+    "voip-room": {
+        "prefix": "voipRoom",
+        "body": [
+            "<voip-room>$1</voip-room>$0"
+        ],
+        "description": "多人音视频对话"
+    },
+    "map": {
+        "prefix": "map",
+        "body": [
+            "<map>$1</map>$0"
+        ],
+        "description": "地图"
+    },
+    "canvas": {
+        "prefix": "canvas",
+        "body": [
+            "<canvas>$1</canvas>$0"
+        ],
+        "description": "画布"
+    },
+    "ad": {
+        "prefix": "ad",
+        "body": [
+            "<ad>$1</ad>$0"
+        ],
+        "description": "Banner 广告"
+    },
+    "official-account": {
+        "prefix": "official-account",
+        "body": [
+            "<official-account>$1</official-account>$0"
+        ],
+        "description": "公众号关注组件"
+    },
+    "open-data": {
+        "prefix": "openData",
+        "body": [
+            "<open-data>$1</open-data>$0"
+        ],
+        "description": "用于展示微信开放的数据"
+    },
+    "web-view": {
+        "prefix": "webView",
+        "body": [
+            "<web-view>$1</web-view>$0"
+        ],
+        "description": "承载网页的容器"
+    },
+    "navigation-bar": {
+        "prefix": "navigationBar",
+        "body": [
+            "<navigation-bar>$1</navigation-bar>$0"
+        ],
+        "description": "页面导航条配置节点，用于指定导航栏的一些属性"
+    },
+    "page-meta": {
+        "prefix": "page-meta",
+        "body": [
+            "<page-meta>$1</page-meta>$0"
+        ],
+        "description": "页面属性配置节点，用于指定页面的一些属性、监听页面事件"
+    }
+}

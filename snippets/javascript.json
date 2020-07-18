@@ -1,0 +1,279 @@
+{
+    "import": {
+        "prefix": "import",
+        "body": [
+            "import $1 from '$2'"
+        ],
+        "description": "import ... from ..."
+    },
+    "createApp": {
+        "prefix": "createApp",
+        "body": [
+            "createApp({",
+            "\t${1:// ...}",
+            "})"
+        ],
+        "description": "Mpx 注册小程序"
+    },
+    "data": {
+        "prefix": "data",
+        "body": [
+            "data: {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 页面的初始数据，Component 组件的内部数据"
+    },
+    "createComponent": {
+        "prefix": "createComponent",
+        "body": [
+            "createComponent({",
+            "\t${1:// ...}",
+            "})"
+        ],
+        "description": "Mpx 创建自定义组件"
+    },
+    "createPage": {
+        "prefix": "createPage",
+        "body": [
+            "createPage({",
+            "\t${1:// ...}",
+            "})"
+        ],
+        "description": "Mpx 注册小程序中的一个页面"
+    },
+    "onLaunch": {
+        "prefix": "onLaunch",
+        "body": [
+            "onLaunch () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 生命周期回调——监听小程序初始化"
+    },
+    "onLoad": {
+        "prefix": "onLoad",
+        "body": [
+            "onLoad () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 生命周期回调—监听页面加载"
+    },
+    "onUnload": {
+        "prefix": "onUnload",
+        "body": [
+            "onUnload () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 生命周期回调—监听页面卸载"
+    },
+    "onPullDownRefresh": {
+        "prefix": "onPullDownRefresh",
+        "body": [
+            "onPullDownRefresh () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，监听用户下拉动作"
+    },
+    "onReachBottom": {
+        "prefix": "onReachBottom",
+        "body": [
+            "onReachBottom () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，页面上拉触底事件的处理函数"
+    },
+    "onShareAppMessage": {
+        "prefix": "onShareAppMessage",
+        "body": [
+            "onShareAppMessage () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，用户点击右上角转发"
+    },
+    "onShareTimeline": {
+        "prefix": "onShareTimeline",
+        "body": [
+            "onShareTimeline () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，用户点击右上角转发到朋友圈"
+    },
+    "onAddToFavorites": {
+        "prefix": "onAddToFavorites",
+        "body": [
+            "onAddToFavorites () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，用户点击右上角收藏"
+    },
+    "onPageScroll": {
+        "prefix": "onPageScroll",
+        "body": [
+            "onPageScroll () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，页面滚动触发事件的处理函数"
+    },
+    "onResize": {
+        "prefix": "onResize",
+        "body": [
+            "onResize () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，页面尺寸改变时触发"
+    },
+    "onTabItemTap": {
+        "prefix": "onTabItemTap",
+        "body": [
+            "onTabItemTap () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Page 回调，当前是 tab 页时，点击 tab 时触发"
+    },
+    "onShow": {
+        "prefix": "onShow",
+        "body": [
+            "onShow () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 生命周期回调——监听小程序启动或切前台，Page 生命周期回调—监听页面显示"
+    },
+    "onHide": {
+        "prefix": "onHide",
+        "body": [
+            "onHide () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 生命周期回调——监听小程序切后台，Page 生命周期回调—监听页面隐藏"
+    },
+    "onReady": {
+        "prefix": "onHide",
+        "body": [
+            "onHide () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 生命周期回调—监听页面初次渲染完成"
+    },
+    "onError": {
+        "prefix": "onError",
+        "body": [
+            "onError () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 回调，错误监听函数"
+    },
+    "onPageNotFound": {
+        "prefix": "onPageNotFound",
+        "body": [
+            "onPageNotFound () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 回调，页面不存在监听函数"
+    },
+    "onUnhandledRejection": {
+        "prefix": "onUnhandledRejection",
+        "body": [
+            "onUnhandledRejection () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 回调，未处理的 Promise 拒绝事件监听函数"
+    },
+    "onThemeChange": {
+        "prefix": "onThemeChange",
+        "body": [
+            "onThemeChange () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "App 回调，监听系统主题变化"
+    },
+    "properties": {
+        "prefix": "properties",
+        "body": [
+            "properties: {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件的对外属性，是属性名到属性设置的映射表"
+    },
+    "created": {
+        "prefix": "created",
+        "body": [
+            "created () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件生命周期函数-在组件实例刚刚被创建时执行，注意此时不能调用 setData "
+    },
+    "attached": {
+        "prefix": "attached",
+        "body": [
+            "attached () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件生命周期函数-在组件实例进入页面节点树时执行"
+    },
+    "ready": {
+        "prefix": "ready",
+        "body": [
+            "ready () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件生命周期函数-在组件布局完成后执行"
+    },
+    "moved": {
+        "prefix": "moved",
+        "body": [
+            "moved () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件生命周期函数-在组件实例被移动到节点树另一个位置时执行"
+    },
+    "detached": {
+        "prefix": "detached",
+        "body": [
+            "detached () {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "Component 组件生命周期函数-在组件实例被从页面节点树移除时执行"
+    },
+    "methods": {
+        "prefix": "methods",
+        "body": [
+            "methods: {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "定义 method 函数"
+    },
+    "computed": {
+        "prefix": "computed",
+        "body": [
+            "computed: {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "计算属性"
+    }
+}
