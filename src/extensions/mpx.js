@@ -1,21 +1,20 @@
 const vscode = require('vscode');
 const wx = require('./wx')
+const { getMpxTag } = require('../utils/getTag')
 
 function provideCompletionItems(document, position, token, context) {
   const line = document.lineAt(position);
-  const lineText = line.text.substring(0, position.character);
-  for (const key in wx) {
-    if (new RegExp(`<${key}\.*$`).test(lineText)) {
-      const value = wx[key]
-      const keys = Object.keys(value)
-      return keys.map(key => {
-        let item = new vscode.CompletionItem(key, vscode.CompletionItemKind.Enum)
-        item.documentation = value[key]
-        // item.insertText = `${key}="$1"`
-        item.insertText = new vscode.SnippetString(`${key}="$1"`)
-        return item
-      })
-    }
+  // const lineText = line.text.substring(0, position.character);
+  let { name } = getMpxTag(document, position) || {}
+  if (name && wx[name]) {
+    const value = wx[name]
+    const keys = Object.keys(value)
+    return keys.map(key => {
+      let item = new vscode.CompletionItem(key, vscode.CompletionItemKind.Enum)
+      item.documentation = value[key]
+      item.insertText = new vscode.SnippetString(`${key}="$1"`)
+      return item
+    })
   }
   const keys = Object.keys(wx)
   return keys.map((key) => {
@@ -33,35 +32,19 @@ function resolveCompletionItem(item, token) {
 }
 
 function activate(context) {
-  context.subscriptions.push(vscode.languages.registerCompletionItemProvider('mpx', {
+  context.subscriptions.push(vscode.languages.registerCompletionItemProvider(['mpx', 'wxml'], {
     provideCompletionItems,
     resolveCompletionItem
   }, '1'));
-  vscode.languages.registerHoverProvider('mpx', {
+  vscode.languages.registerHoverProvider(['mpx', 'wxml'], {
     provideHover(document, position) {
-      const line = document.lineAt(position)
-      const text = line.text
-      const index = position.character
-      for (const key in wx) {
-        if (new RegExp(`<${key}\.*$`).test(text)) {
-          const value = wx[key]
-          let left = index - 1
-          let right = index
-          const list = []
-          const reg = /([a-z]|[A-Z]|-)/
-          while(reg.test(text[right]) && right < text.length) {
-            list.push(text[right++])
-          }
-          while(reg.test(text[left]) && left > -1) {
-            list.unshift(text[left--])
-          }
-          const code = list.join('')
-          if (code === key) {
-            return new vscode.Hover(`${code}标签说明: 包含可选属性, ${Object.keys(value).join(', ')}`)
-          }
-          if (value[code]) {
-            return new vscode.Hover(`${code}属性说明: ${value[code]}`)
-          }
+      const { isOnTagName, isOnAttrName, name, posWord } = getMpxTag(document, position) || {}
+      if (wx[name]) {
+        if (isOnTagName) {
+          return new vscode.Hover(`${name} 标签说明: 包含可选属性, ${Object.keys(wx[name]).join(', ')}`)
+        }
+        if (isOnAttrName && wx[name][posWord]) {
+          return new vscode.Hover(`${posWord} 属性说明: ${wx[name][posWord]}`)
         }
       }
       return null
